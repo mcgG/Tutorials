@@ -1,5 +1,7 @@
 # JWT
 
+https://juejin.im/post/59749e3751882559274bc80d
+
 # ![](/assets/jwt1.png)
 
 `优点`  
@@ -14,9 +16,7 @@ Token有长度限制
 Token不能撤销  
 需要token有失效时间限制\(exp\)
 
-
-
-
+---
 
 JSON Web Token
 
