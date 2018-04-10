@@ -2,6 +2,20 @@
 
 # ![](/assets/jwt1.png)
 
+`优点`  
+快速开发  
+不需要cookie  
+JSON在移动端的广泛应用  
+不依赖于社交登录  
+相对简单的概念理解
+
+`缺点`  
+Token有长度限制  
+Token不能撤销  
+需要token有失效时间限制\(exp\)
+
+
+
 
 
 JSON Web Token
@@ -41,19 +55,7 @@ JWT = header + payload + signature
 
 ![](/assets/jwtinreaslworld.png)
 
-
-
 **Session + Cookie**
 
 Cookie+Session的存在主要是为了解决HTTP这一无状态协议下服务器如何识别用户的问题，其原理就是在用户登录通过验证后，服务端将数据加密后保存到客户端浏览器的Cookie中，同时服务器保留相对应的Session（文件或DB）。用户之后发起的请求都会携带Cookie信息，服务端需要根据Cookie寻回对应的Session，从而完成验证，确认这是之前登陆过的用户。
-
-
-
-
-
-
-
-
-
-
 
