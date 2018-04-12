@@ -20,23 +20,26 @@
 
 在一个由多个微服务构成的大系统中，会有一些非关键服务，用来执行一些不需要立刻得到结果的计算。而且它们的计算结果并不会返回给消息的发送者。这个时候就应该使用MQ。比如在一个ERP系统中有一些日志服务、业务监控服务等。这些服务会发布一些系统事件，针对这些事件可能有多个应用关注。对于日志服务，当系统出现某些异常情况时需要浏览日志，查找问题的根源；也可以在分析系统运行的瓶颈时提供关键数据。对于业务监控系统，例如货物入仓出仓的消息，可以被报表系统关注，生成报表；也可以被配货系统关注，及时补足所需库存。
 
+#### RabbitMQ
 
-
-#### RabbitMQ：
-
-* 可靠性（Reliability）  RabbitMQ 使用一些机制来保证可靠性，如持久化、传输确认、发布确认。
-* 灵活的路由（Flexible Routing）  在消息进入队列之前，通过 Exchange 来路由消息的。对于典型的路由功能，RabbitMQ 已经提供了一些内置的 Exchange 来实现。针对更复杂的路由功能，可以将多个 Exchange 绑定在一起，也通过插件机制实现自己的 Exchange 。
-* 消息集群（Clustering）  多个 RabbitMQ 服务器可以组成一个集群，形成一个逻辑 Broker 。
-* 高可用（Highly Available Queues）  队列可以在集群中的机器上进行镜像，使得在部分节点出问题的情况下队列仍然可用。
-* 多种协议（Multi-protocol）  RabbitMQ 支持多种消息队列协议，比如 STOMP、MQTT 等等。
-*  多语言客户端（Many Clients）  RabbitMQ 几乎支持所有常用语言，比如 Java、.NET、Ruby 等等。
-* 管理界面（Management UI）  RabbitMQ 提供了一个易用的用户界面，使得用户可以监控和管理消息 Broker 的许多方面。
-* 跟踪机制（Tracing）  如果消息异常，RabbitMQ 提供了消息跟踪机制，使用者可以找出发生了什么。
-* 插件机制（Plugin System）  RabbitMQ 提供了许多插件，来从多方面进行扩展，也可以编写自己的插件。
-
-
-
-
+* 可靠性（Reliability）
+  RabbitMQ 使用一些机制来保证可靠性，如持久化、传输确认、发布确认。
+* 灵活的路由（Flexible Routing）
+  在消息进入队列之前，通过 Exchange 来路由消息的。对于典型的路由功能，RabbitMQ 已经提供了一些内置的 Exchange 来实现。针对更复杂的路由功能，可以将多个 Exchange 绑定在一起，也通过插件机制实现自己的 Exchange 。
+* 消息集群（Clustering）
+  多个 RabbitMQ 服务器可以组成一个集群，形成一个逻辑 Broker 。
+* 高可用（Highly Available Queues）
+  队列可以在集群中的机器上进行镜像，使得在部分节点出问题的情况下队列仍然可用。
+* 多种协议（Multi-protocol）
+  RabbitMQ 支持多种消息队列协议，比如 STOMP、MQTT 等等。
+* 多语言客户端（Many Clients）
+  RabbitMQ 几乎支持所有常用语言，比如 Java、.NET、Ruby 等等。
+* 管理界面（Management UI）
+  RabbitMQ 提供了一个易用的用户界面，使得用户可以监控和管理消息 Broker 的许多方面。
+* 跟踪机制（Tracing）
+  如果消息异常，RabbitMQ 提供了消息跟踪机制，使用者可以找出发生了什么。
+* 插件机制（Plugin System）
+  RabbitMQ 提供了许多插件，来从多方面进行扩展，也可以编写自己的插件。
 
 
 
